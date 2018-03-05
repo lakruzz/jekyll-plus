@@ -1,28 +1,41 @@
 # lakruzz/jekyll-plus
 
-**Source for Docker image lakruzz/jekyll-plus**
-
-The image is designed to behave like GitHub Pages, and it utilizes the gem ["github-pages"](https://pages.github.com/versions/), but it also includes some nice tools and utilities that aren't necessarily supported by GitHub pages, which runs in safe mode, with a limited support for plugins.
+The image is designed to behave like GitHub Pages, it utilizes the Ruby gem ["github-pages"](https://pages.github.com/versions/) which is maintained by GitHub. But it also includes some nice tools and utilities that aren't necessarily supported by GitHub pages, which runs in safe mode, with only a limited support for plugins.
 
 The source - including README and dockerfile is available at GitHub from [lakruzz/jekyll-plus](https://github.com/lakruzz/jekyll-plus)
 
-
 ## Recommended use
 
-Change directory into the root of your Jekyll site folder and then run.
+To build/serve a jekyll site change directory into the root of your jekyll site folder and then run `jekyll serve` as exemplified.
 
-```shell
+**Mac**
+
+```
 docker run -i -t --rm \
-  -v $(pwd):/website:rw --workdir /website \
-  -p 80:4000  jekyll-plus jekyll serve
+  -v $(pwd):/app:rw \
+  --workdir /app \
+  -p 80:4000  lakruzz/jekyll-plus \
+  jekyll serve --host 0.0.0.0 --force_polling
 ```
 
-Or if you are really cool you can create aliases in your environment resource files (`.zshrc`, `.bashrc` or whatever you are using) like this:
+Now browse the IP of your docker machine ("default" used in the example):
 
-```shell
-alias jekyll='docker run -i -t --rm -v \
-      $(pwd):/website:rw --workdir /website \
-      -p 80:4000 praqma/jekyll jekyll'
+```
+open http://`docker-machine ip default`
 ```
 
-And then simply run `jekyll serve`
+**Linux**
+
+```
+docker run -i -t --rm \
+  -v $(pwd):/app:rw \
+  --workdir /app \
+  -p 4000:4000  lakruzz/jekyll-plus \
+  jekyll serve
+```
+
+Now browse port 4000 on you localhost:
+
+```
+xdg-open localhost:4000
+```
