@@ -1,15 +1,15 @@
-# jekyll-plus
+# lakruzz/jekyll-plus
 
 **Source for Docker image lakruzz/jekyll-plus**
 
-The image is designed to behave like GitHub Pages, and it utilizes the gem "github-pages", but it also includes a list of nice tools and utilities that aren't necessarily supported by GitHub pages, which runs in safe mode, with a limited support for plugins.
+The image is designed to behave like GitHub Pages, and it utilizes the gem ["github-pages"](https://pages.github.com/versions/), but it also includes some nice tools and utilities that aren't necessarily supported by GitHub pages, which runs in safe mode, with a limited support for plugins.
 
-The source - including README and dockerfile is available at github.com/lakruzz/jekyll-plus
+The source - including README and dockerfile is available at GitHub from [lakruzz/jekyll-plus](https://github.com/lakruzz/jekyll-plus)
 
 
 ## Recommended use
 
-Could be to change directory into the root of your jekyll site folder and then run.
+Change directory into the root of your Jekyll site folder and then run.
 
 ```shell
 docker run -i -t --rm \

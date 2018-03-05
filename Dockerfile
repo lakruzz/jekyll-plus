@@ -1,3 +1,6 @@
+# Based on the GitHub pages stack (Ruby, Jekyll, Liquid, Sass)
+# includes additional Jekyll plugins.
+
 FROM ruby:2.5.0
 
 LABEL author="Lakruzz <me@lakruzz.com>"
@@ -12,12 +15,6 @@ RUN gem install \
       github-pages \
       jekyll-responsive-image
 
-RUN find /usr -name magick
 # https://docs.docker.com/engine/reference/builder/#expose
-
-RUN ln -s /usr/include/x86_64-linux-gnu/ImageMagick-6/magick /usr/local/bin/magick 
-
-RUN echo $PATH
-
 
 EXPOSE 4000
