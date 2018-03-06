@@ -39,3 +39,8 @@ Now browse port 4000 on you localhost:
 ```
 xdg-open localhost:4000
 ```
+
+For more info- read my blogpost
+
+[![docker jekyll](http://www.lakruzz.com/images/blog/docker-jekyll.png)
+**Docker Jekyll - 5 easy steps**](http://www.lakruzz.com/en/docker-jekyll/)
