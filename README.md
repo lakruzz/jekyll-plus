@@ -1,14 +1,16 @@
 # lakruzz/jekyll-plus
 
-The image is designed to behave like GitHub Pages, it utilizes the Ruby gem ["github-pages"](https://pages.github.com/versions/) which is maintained by GitHub. But it also includes some nice tools and utilities that aren't necessarily supported by GitHub pages, which runs in safe mode, with only a limited support for plugins.
+The image is designed to behave like GitHub Pages, it utilizes the latest version of the Ruby gem ["github-pages"](https://pages.github.com/versions/) which is maintained by GitHub. But it also includes some nice tools and utilities that aren't necessarily supported by GitHub pages, which runs in safe mode, with only a limited support for plugins.
 
-The source - including README and dockerfile is available at GitHub from [lakruzz/jekyll-plus](https://github.com/lakruzz/jekyll-plus)
+The source is available at GitHub from [lakruzz/jekyll-plus](https://github.com/lakruzz/jekyll-plus)
 
 ## Recommended use
 
 To build/serve a jekyll site change directory into the root of your jekyll site folder and then run `jekyll serve` as exemplified.
 
-**Mac**
+### Examples
+
+**Mac - using Docker-machine "default"**
 
 ```
 docker run -i -t --rm \
@@ -17,6 +19,7 @@ docker run -i -t --rm \
   -p 80:4000  lakruzz/jekyll-plus \
   jekyll serve --host 0.0.0.0 --force_polling
 ```
+
 
 Now browse the IP of your docker machine ("default" used in the example):
 
@@ -34,13 +37,15 @@ docker run -i -t --rm \
   jekyll serve
 ```
 
+
 Now browse port 4000 on you localhost:
 
 ```
 xdg-open localhost:4000
 ```
 
-For more info- read my blogpost
+## Report issues
+Use the issues on the GitHub repo: [`lakruzz/jekyll-plus`](https://github.com/lakruzz/jekyll-plus/issues)
 
-[![docker jekyll](http://www.lakruzz.com/images/blog/docker-jekyll.png)
-**Docker Jekyll - 5 easy steps**](http://www.lakruzz.com/en/docker-jekyll/)
+## For more info
+...read my blogpost [**Docker Jekyll - 5 easy steps**](http://www.lakruzz.com/en/docker-jekyll/)
