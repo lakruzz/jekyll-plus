@@ -44,8 +44,10 @@ Now browse port 4000 on you localhost:
 xdg-open localhost:4000
 ```
 
-## Report issues
+## Report issues or ask questions
 Use the issues on the GitHub repo: [`lakruzz/jekyll-plus`](https://github.com/lakruzz/jekyll-plus/issues)
+
+There the answered support issues are marked ["Q&A - Asked and Answered"](https://github.com/lakruzz/jekyll-plus/issues?q=label%3AQ%26A)
 
 ## For more info
 ...read my blogpost [**Docker Jekyll - 5 easy steps**](http://www.lakruzz.com/en/docker-jekyll/)
