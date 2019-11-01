@@ -28,14 +28,5 @@ ENV LC_ALL=en_US.UTF-8
 #   https://github.com/wildlyinaccurate/jekyll-responsive-image
 
 RUN gem install \
-      bundler \
       github-pages \
-      jekyll-responsive-image \
-      jekyll-auth
-
-RUN echo 'source "https://rubygems.org" \n\
-gem "jekyll-auth"' > Gemfile
-
-RUN bundle install
-
-RUN bundle exec jekyll-auth new
+      jekyll-responsive-image
